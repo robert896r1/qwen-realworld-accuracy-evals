@@ -1,4 +1,7 @@
-# Results
+---
+layout: page
+title: Results
+---
 
 Canonical machine-readable summaries:
 

@@ -1,4 +1,7 @@
-# Methodology
+---
+layout: page
+title: Methodology
+---
 
 ## What this evaluates
 

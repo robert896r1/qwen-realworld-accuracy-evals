@@ -1,4 +1,7 @@
-# Tested profiles and model links
+---
+layout: page
+title: Tested profiles and model links
+---
 
 Model weights are not included in this repository.
 

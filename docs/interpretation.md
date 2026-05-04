@@ -1,4 +1,7 @@
-# Interpretation
+---
+layout: page
+title: Interpretation
+---
 
 The main readout is now on the repo front page. This page keeps the caveats in one place.
 

@@ -1,4 +1,7 @@
-# Contributing real-world cases and runs
+---
+layout: page
+title: Contributing real-world cases and runs
+---
 
 The repo is useful only if it stays grounded in real work without becoming a dump of private prompts or random benchmark puzzles.
 

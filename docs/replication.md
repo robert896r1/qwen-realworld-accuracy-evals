@@ -1,4 +1,7 @@
-# Replication guide
+---
+layout: page
+title: Replication guide
+---
 
 This guide is written for someone who just found the repo and wants to test their own local model.
 

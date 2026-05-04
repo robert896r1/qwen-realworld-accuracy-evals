@@ -1,3 +1,11 @@
 title: Qwen Real-World Accuracy Evals
 description: Reproducible local Qwen3.6 GGUF profile evaluations for coding-agent sidecar workflows.
 theme: minima
+
+header_pages:
+  - methodology.md
+  - profiles.md
+  - results.md
+  - interpretation.md
+  - replication.md
+  - contributing-cases.md

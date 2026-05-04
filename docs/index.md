@@ -1,4 +1,8 @@
-# Qwen Real-World Accuracy Evals
+---
+layout: page
+title: Qwen Real-World Accuracy Evals
+permalink: /
+---
 
 These tests came from a working Codex + local Qwen workflow. Qwen's job there is not to replace Codex; it is the second set of eyes for challenge, validation, UI review, and long-context sanity checks.
 
