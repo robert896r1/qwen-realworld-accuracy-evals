@@ -26,7 +26,6 @@ On the exact-scored max-accuracy suite, the best tested 128k profiles tied:
 | `bartowski-128k-f16` | 36/39 | 45/48 |
 | `bartowski-128k-q8` | 36/39 | 45/48 |
 | `unsloth-128k-q8` | 36/39 | 45/48 |
-| `unsloth-128k-q8-reasoning-on-enable-false-preserve-false` | 36/39 | 45/48 |
 
 `unsloth-128k-f16` loaded but timed out on the two long-context cases in this local runtime. The 65k profiles worked inside their context envelope but failed the >65k case by construction.
 

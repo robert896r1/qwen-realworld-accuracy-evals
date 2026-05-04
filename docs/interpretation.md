@@ -17,7 +17,6 @@ The following tied on the max-accuracy suite:
 - `bartowski-128k-f16`
 - `bartowski-128k-q8`
 - `unsloth-128k-q8`
-- `unsloth-128k-q8-reasoning-on-enable-false-preserve-false`
 
 This does not prove q8 is universally equal to f16. It says no deficit appeared in this task-specific suite.
 
@@ -25,17 +24,6 @@ This does not prove q8 is universally equal to f16. It says no deficit appeared 
 
 `unsloth-128k-f16` loaded locally but timed out on both long-context cases. That profile was therefore not viable for this workflow as tested.
 
-## Reasoning flag variant
-
-The variant:
-
-```bash
---reasoning on
---reasoning-format deepseek
---chat-template-kwargs '{"enable_thinking":false,"preserve_thinking":false}'
-```
-
-was accepted by `llama.cpp`, but produced the same score as the baseline Unsloth 128k q8 non-thinking profile. Raw responses did not expose a separate reasoning channel in the sampled outputs.
 
 ## Practical recommendation
 

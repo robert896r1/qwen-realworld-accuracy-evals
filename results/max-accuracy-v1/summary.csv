@@ -5,4 +5,3 @@ bartowski-128k-f16,results/max-accuracy-v1/raw/20260504T071456Z-bartowski-128k-f
 bartowski-128k-q8,results/max-accuracy-v1/raw/20260504T071634Z-bartowski-128k-q8,36,39,45.0,48.0,92.31,93.75,56.749,0,30,33,3,3,3,3
 unsloth-128k-f16,results/max-accuracy-v1/raw/20260504T075708Z-unsloth-128k-f16,30,39,30.0,48.0,76.92,62.5,634.107,2,30,33,0,3,0,3
 unsloth-128k-q8,results/max-accuracy-v1/raw/20260504T080906Z-unsloth-128k-q8,36,39,45.0,48.0,92.31,93.75,57.602,0,30,33,3,3,3,3
-unsloth-128k-q8-reasoning-on-enable-false-preserve-false,results/max-accuracy-v1/raw/20260504T160945Z-unsloth-128k-q8-reasoning-on-enable-false-preserve-false,36,39,45.0,48.0,92.31,93.75,56.117,0,30,33,3,3,3,3

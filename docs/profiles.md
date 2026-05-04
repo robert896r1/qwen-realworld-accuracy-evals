@@ -34,7 +34,6 @@ configs/*.sh
 | `unsloth-128k-q8` | `Qwen3.6-27B-UD-Q6_K_XL.gguf` | 131,072 | q8_0/q8_0 | no-think |
 | `bartowski-128k-f16` | `Qwen_Qwen3.6-27B-Q6_K_L.gguf` | 131,072 | f16/f16 | no-think |
 | `bartowski-128k-q8` | `Qwen_Qwen3.6-27B-Q6_K_L.gguf` | 131,072 | q8_0/q8_0 | no-think |
-| `unsloth-128k-q8-reasoning-on-enable-false-preserve-false` | `Qwen3.6-27B-UD-Q6_K_XL.gguf` | 131,072 | q8_0/q8_0 | `--reasoning on`, `--reasoning-format deepseek`, `enable_thinking:false`, `preserve_thinking:false` |
 
 ## Notes from upstream docs
 

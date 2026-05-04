@@ -9,7 +9,9 @@
     "port": 8082,
     "reasoning": "off",
     "reasoning_format": "none",
-    "chat_template_kwargs": {"enable_thinking": false}
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    }
   },
   {
     "profile": "unsloth-65k-q8",
@@ -21,7 +23,9 @@
     "port": 8082,
     "reasoning": "off",
     "reasoning_format": "none",
-    "chat_template_kwargs": {"enable_thinking": false}
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    }
   },
   {
     "profile": "unsloth-128k-f16",
@@ -33,7 +37,9 @@
     "port": 8082,
     "reasoning": "off",
     "reasoning_format": "none",
-    "chat_template_kwargs": {"enable_thinking": false}
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    }
   },
   {
     "profile": "unsloth-128k-q8",
@@ -45,19 +51,9 @@
     "port": 8082,
     "reasoning": "off",
     "reasoning_format": "none",
-    "chat_template_kwargs": {"enable_thinking": false}
-  },
-  {
-    "profile": "unsloth-128k-q8-reasoning-on-enable-false-preserve-false",
-    "model": "Qwen3.6-27B-UD-Q6_K_XL.gguf",
-    "model_repo": "https://huggingface.co/unsloth/Qwen3.6-27B-GGUF",
-    "model_file_url": "https://huggingface.co/unsloth/Qwen3.6-27B-GGUF?show_file_info=Qwen3.6-27B-UD-Q6_K_XL.gguf",
-    "context_tokens": 131072,
-    "kv_cache": "q8_0/q8_0",
-    "port": 8082,
-    "reasoning": "on",
-    "reasoning_format": "deepseek",
-    "chat_template_kwargs": {"enable_thinking": false, "preserve_thinking": false}
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    }
   },
   {
     "profile": "bartowski-128k-f16",
@@ -69,7 +65,9 @@
     "port": 8081,
     "reasoning": "off",
     "reasoning_format": "none",
-    "chat_template_kwargs": {"enable_thinking": false}
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    }
   },
   {
     "profile": "bartowski-128k-q8",
@@ -81,6 +79,8 @@
     "port": 8081,
     "reasoning": "off",
     "reasoning_format": "none",
-    "chat_template_kwargs": {"enable_thinking": false}
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    }
   }
 ]

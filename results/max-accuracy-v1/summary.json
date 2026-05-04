@@ -106,23 +106,5 @@
     "common_needle_total": 3,
     "extended_needle_score": 3,
     "extended_needle_total": 3
-  },
-  {
-    "profile": "unsloth-128k-q8-reasoning-on-enable-false-preserve-false",
-    "result_dir": "results/max-accuracy-v1/raw/20260504T160945Z-unsloth-128k-q8-reasoning-on-enable-false-preserve-false",
-    "score": 36,
-    "score_total": 39,
-    "weighted_score": 45.0,
-    "weighted_total": 48.0,
-    "accuracy_pct": 92.31,
-    "weighted_pct": 93.75,
-    "elapsed_sec": 56.117,
-    "errors": 0,
-    "short_score": 30,
-    "short_total": 33,
-    "common_needle_score": 3,
-    "common_needle_total": 3,
-    "extended_needle_score": 3,
-    "extended_needle_total": 3
   }
 ]

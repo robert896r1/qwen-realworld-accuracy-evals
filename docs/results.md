@@ -16,7 +16,6 @@ Canonical machine-readable summaries:
 | `bartowski-128k-q8` | 36/39 | 45/48 | 0 | 56.7s | 30/33 | 3/3 | 3/3 |
 | `unsloth-128k-f16` | 30/39 | 30/48 | 2 | 634.1s | 30/33 | 0/3 | 0/3 |
 | `unsloth-128k-q8` | 36/39 | 45/48 | 0 | 57.6s | 30/33 | 3/3 | 3/3 |
-| `unsloth-128k-q8-reasoning-on-enable-false-preserve-false` | 36/39 | 45/48 | 0 | 56.1s | 30/33 | 3/3 | 3/3 |
 
 ## Visuals
 
