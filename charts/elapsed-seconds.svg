@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="520" viewBox="0 0 1100 520">
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="540" viewBox="0 0 1100 540">
 <rect width="100%" height="100%" fill="#0b1020"/>
 <text x="310" y="34" fill="#f8fafc" font-size="24" font-family="Inter, Arial" font-weight="700">Elapsed seconds by profile</text>
 <line x1="310" y1="430" x2="1060" y2="430" stroke="#334155"/>
@@ -16,9 +16,10 @@
 <text x="381.0" y="286.7" fill="#f8fafc" font-size="14" font-family="Inter, Arial">56.7s</text>
 <text x="20" y="346.7" fill="#cbd5e1" font-size="14" font-family="Inter, Arial">unsloth-128k-f16</text>
 <rect x="310" y="321.4" width="681.8" height="37.2" rx="7" fill="#38bdf8"/>
-<text x="1001.8" y="346.7" fill="#f8fafc" font-size="14" font-family="Inter, Arial">634.1s</text>
+<text x="1001.8" y="346.7" fill="#f8fafc" font-size="14" font-family="Inter, Arial">634.1s*</text>
 <text x="20" y="406.7" fill="#cbd5e1" font-size="14" font-family="Inter, Arial">unsloth-128k-q8</text>
 <rect x="310" y="381.4" width="61.9" height="37.2" rx="7" fill="#38bdf8"/>
 <text x="381.9" y="406.7" fill="#f8fafc" font-size="14" font-family="Inter, Arial">57.6s</text>
-<text x="20" y="500" fill="#94a3b8" font-size="13" font-family="Inter, Arial">Generated from results/max-accuracy-v1/summary.json</text>
+<text x="20" y="504" fill="#94a3b8" font-size="13" font-family="Inter, Arial">Generated from results/max-accuracy-v1/summary.json</text>
+<text x="20" y="524" fill="#fbbf24" font-size="13" font-family="Inter, Arial">* 128k f16 Unsloth hit local memory/throughput pressure and timed out on both long-context prompts.</text>
 </svg>

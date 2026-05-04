@@ -12,8 +12,10 @@ Scope: same exact-scored `max-accuracy-v1` suite across Bartowski and Unsloth pr
 | `unsloth-65k-q8` | 33/39 | 36/48 | 1 | 23.7s | 30/33 | 3/3 | 0/3 | `results/20260504T071242Z-unsloth-65k-q8` |
 | `bartowski-128k-f16` | 36/39 | 45/48 | 0 | 55.7s | 30/33 | 3/3 | 3/3 | `results/20260504T071456Z-bartowski-128k-f16` |
 | `bartowski-128k-q8` | 36/39 | 45/48 | 0 | 56.7s | 30/33 | 3/3 | 3/3 | `results/20260504T071634Z-bartowski-128k-q8` |
-| `unsloth-128k-f16` | 30/39 | 30/48 | 2 | 634.1s | 30/33 | 0/3 | 0/3 | `results/20260504T075708Z-unsloth-128k-f16` |
+| `unsloth-128k-f16` | 30/39 | 30/48 | 2 | 634.1s* | 30/33 | 0/3 | 0/3 | `results/20260504T075708Z-unsloth-128k-f16` |
 | `unsloth-128k-q8` | 36/39 | 45/48 | 0 | 57.6s | 30/33 | 3/3 | 3/3 | `results/20260504T080906Z-unsloth-128k-q8` |
+
+\* Loaded, then timed out on both long-context prompts under local memory/throughput pressure. The elapsed value includes those timeouts and should not be treated as completed throughput.
 
 ## New Unsloth 128k launch confirmation
 
