@@ -10,32 +10,33 @@ Contributions are welcome, but the accepted suite stays curated. Easy to submit,
 
 ### 1. Replicate a run
 
-If you have an OpenAI-compatible local endpoint running, run the canonical suite:
+Start your own local model server first, then run the included eval script against that endpoint. The script does not choose or launch the model; `--base-url` determines what is tested.
+
+Smoke test two cases:
 
 ```bash
 python tools/run_eval.py \
-  --suite evals/sidecar-companion-v1 \
   --base-url http://127.0.0.1:8082/v1 \
-  --model your-local-model-alias \
-  --profile-label your-profile-label
-```
-
-For a quick smoke test:
-
-```bash
-python tools/run_eval.py \
-  --suite evals/sidecar-companion-v1 \
-  --base-url http://127.0.0.1:8082/v1 \
-  --model your-local-model-alias \
-  --profile-label smoke-test \
+  --profile-label my-local-smoke-test \
   --case-limit 2
 ```
 
-Validate and package the result:
+Run the full suite:
 
 ```bash
-python tools/validate_run.py runs/local/<your-run-dir>
-python tools/package_submission.py runs/local/<your-run-dir>
+python tools/run_eval.py \
+  --base-url http://127.0.0.1:8082/v1 \
+  --profile-label qwen3.6-27b-unsloth-128k-q8
+```
+
+If your server requires a specific OpenAI `model` value, add `--model local` or whatever value your server expects.
+
+Validate and package the newest result:
+
+```bash
+RUN_DIR="$(ls -td runs/local/* | head -1)"
+python tools/validate_run.py "$RUN_DIR"
+python tools/package_submission.py "$RUN_DIR"
 ```
 
 Attach the zip from `submissions/out/` to a **Submit run result** issue.
@@ -83,7 +84,7 @@ Do not submit:
 
 ## Quality bar
 
-Good cases are boring to score and annoying for models to pass.
+A good case has a clear expected outcome, a clear scoring rule, and a failure mode that matters in real companion-agent work.
 
 Accepted cases must be:
 

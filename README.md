@@ -42,36 +42,57 @@ For this workload, the keepers are:
 
 That order is deliberately conservative: prioritize the successful 128k q8 profiles for day-to-day local sidecar work, keep the Bartowski f16 result as the control, and do not read more into the data than this suite actually tested.
 
-## Replicate the suite
+## Try it on your own local model
 
-This repo does not provide model weights or start model servers. Start your local model separately, then point the runner at an existing OpenAI-compatible endpoint.
+If you are new to the repo, the workflow is:
 
-Quick smoke run:
+1. clone the repo;
+2. start your own local model server separately;
+3. run the included eval script against that server;
+4. validate or package the output if you want to share it.
+
+The repo does **not** download model weights or launch a model for you. It only provides the eval cases, runner, scoring, and packaging tools.
+
+```bash
+git clone https://github.com/robert896r1/qwen-realworld-accuracy-evals.git
+cd qwen-realworld-accuracy-evals
+```
+
+Start your local model with whatever runtime you use. The only requirement is an OpenAI-compatible `/v1/chat/completions` endpoint. For example, if your local server is listening at `http://127.0.0.1:8082/v1`, run a two-case smoke test first:
 
 ```bash
 python tools/run_eval.py \
-  --suite evals/sidecar-companion-v1 \
   --base-url http://127.0.0.1:8082/v1 \
-  --model your-local-model-alias \
-  --profile-label smoke-test \
+  --profile-label my-local-smoke-test \
   --case-limit 2
 ```
 
-Full canonical run:
+`--profile-label` is just the name used for the run folder and result package. It does **not** switch the model. The model being tested is whatever is already running at `--base-url`.
+
+If your server requires a specific OpenAI `model` value, add it explicitly:
 
 ```bash
 python tools/run_eval.py \
-  --suite evals/sidecar-companion-v1 \
   --base-url http://127.0.0.1:8082/v1 \
-  --model your-local-model-alias \
-  --profile-label your-profile-label
+  --model local \
+  --profile-label qwen3.6-27b-unsloth-128k-q8-smoke \
+  --case-limit 2
 ```
 
-Validate and package the result:
+For the full suite, drop the `--case-limit` flag:
 
 ```bash
-python tools/validate_run.py runs/local/<run-dir>
-python tools/package_submission.py runs/local/<run-dir>
+python tools/run_eval.py \
+  --base-url http://127.0.0.1:8082/v1 \
+  --profile-label qwen3.6-27b-unsloth-128k-q8
+```
+
+Then validate and package the newest run:
+
+```bash
+RUN_DIR="$(ls -td runs/local/* | head -1)"
+python tools/validate_run.py "$RUN_DIR"
+python tools/package_submission.py "$RUN_DIR"
 ```
 
 The package lands in `submissions/out/` and can be attached to a GitHub issue. Local run output is ignored by git by default.
@@ -83,7 +104,7 @@ The accepted suite is curated. The easiest way to help is either:
 1. submit a packaged run result from your own hardware/model profile; or
 2. propose a small, sanitized real-world failure case.
 
-Good cases are boring to score and annoying for models to pass: over-build detection, missed hard directives, bad UI judgment, weak challenge behavior, artifact triage mistakes, or long-context misses.
+Useful case proposals should have a clear expected outcome and should test failures that matter in actual companion-agent work: over-build detection, missed hard directives, bad UI judgment, weak challenge behavior, artifact triage mistakes, or long-context misses.
 
 Start with [CONTRIBUTING.md](CONTRIBUTING.md) or [Contributing cases](docs/contributing-cases.md).
 
