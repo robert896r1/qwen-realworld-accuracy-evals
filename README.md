@@ -1,8 +1,8 @@
 # Qwen Real-World Accuracy Evals
 
-These tests came out of a working Codex + local Qwen setup, not a leaderboard exercise.
+These tests came out of a working Codex + local Qwen setup, not a leaderboard exercise. The goal isn't token per second or speed records. It's accuracy as the main goal. 
 
-In that workflow, Qwen has a narrow job: challenge Codex, catch over-building, review UI drafts, and stay useful when the prompt includes a lot of repo or session context. The question was practical: **which local `llama.cpp` profile is worth keeping on the desk?**
+In that workflow, Qwen has a narrow job: challenge Codex, catch over-building, review UI drafts, and stay useful when the prompt includes a lot of repo or session context. The question was practical: **which local `llama.cpp` profile is worth keeping?**
 
 ## Read this first
 
