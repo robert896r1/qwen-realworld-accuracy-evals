@@ -31,9 +31,8 @@ Canonical machine-readable summaries:
 
 ## Raw results
 
-Raw API responses and per-case scoring records are included under:
+Raw API responses and per-case scoring records for the headline exact-scored suite are included under:
 
 ```text
 results/max-accuracy-v1/raw/
-results/sidecar-profile-evals-v1/raw/
 ```

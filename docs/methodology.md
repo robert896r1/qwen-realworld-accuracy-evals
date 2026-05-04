@@ -29,9 +29,9 @@ Exact-scored JSON cases with known answers:
 
 This suite is intentionally strict: semantic near-misses can lose points if an exact enum/list/value is wrong.
 
-### `sidecar-profile-evals-v1`
+### Historical qualitative sidecar pack
 
-A qualitative sidecar suite for challenge and UI-review behavior. It records raw responses and structural checks. The initial scoring was operator/Codex qualitative rather than an LLM-as-judge score.
+An earlier qualitative sidecar pack was used during local iteration, but it is not part of the public canonical suite. It was removed from the repo before broader release to keep the project focused on the reproducible exact-scored suite.
 
 ## Sampling and API shape
 
