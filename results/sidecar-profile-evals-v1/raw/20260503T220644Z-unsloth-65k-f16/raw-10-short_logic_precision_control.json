@@ -1,0 +1,36 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "<think>\n\n</think>\n\n{\n  \"answer\": \"42\",\n  \"calculation\": \"7 cards * 2 states per card = 14 screenshot checks\",\n  \"preserved_constraints\": [\n    \"do not create files\",\n    \"do not recommend a framework switch\",\n    \"do not start services\"\n  ]\n}"
+      }
+    }
+  ],
+  "created": 1777846065,
+  "model": "qwen-27b-unsloth-nothink",
+  "system_fingerprint": "b8999-b97ebdc98",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 72,
+    "prompt_tokens": 166,
+    "total_tokens": 238,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "id": "chatcmpl-gvnE8Prryr4eMXto0eyN8BNETOBkUfMt",
+  "timings": {
+    "cache_n": 0,
+    "prompt_n": 166,
+    "prompt_ms": 119.69,
+    "prompt_per_token_ms": 0.7210240963855421,
+    "prompt_per_second": 1386.9162001838083,
+    "predicted_n": 72,
+    "predicted_ms": 1279.237,
+    "predicted_per_token_ms": 17.767180555555555,
+    "predicted_per_second": 56.28355027254528
+  }
+}

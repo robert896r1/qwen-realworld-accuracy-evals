@@ -1,0 +1,36 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "<think>\n\n</think>\n\n{\n  \"operator_final_authority\": \"ROBERT_ONLY\",\n  \"best_patch_policy\": \"STAGE_NOT_APPLY\",\n  \"live_group_chat_claim\": \"DISALLOWED_FAKE_COPRESENCE\"\n}"
+      }
+    }
+  ],
+  "created": 1777878952,
+  "model": "qwen-27b-q6k-nothink",
+  "system_fingerprint": "b8999-b97ebdc98",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 51,
+    "prompt_tokens": 76126,
+    "total_tokens": 76177,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "id": "chatcmpl-eTZDk7fcsWs9Mg8HWok9VN0KKtTj5k2c",
+  "timings": {
+    "cache_n": 0,
+    "prompt_n": 76126,
+    "prompt_ms": 32905.777,
+    "prompt_per_token_ms": 0.43225411817250353,
+    "prompt_per_second": 2313.453956732278,
+    "predicted_n": 51,
+    "predicted_ms": 1055.664,
+    "predicted_per_token_ms": 20.69929411764706,
+    "predicted_per_second": 48.31082617196381
+  }
+}

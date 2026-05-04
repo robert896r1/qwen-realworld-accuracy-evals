@@ -1,0 +1,36 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "<think>\n\n</think>\n\n{\n  \"rating\": 4,\n  \"eval_candidate\": true,\n  \"rationale\": \"The artifact contains high-value substantive content (concrete risks and validation suggestions) despite failing strict schema compliance. For a local eval harness, the semantic utility outweighs the structural defect. The 'parse warning' status is appropriate; it should be treated as a valid but non-conforming response that requires post-processing or schema relaxation to extract value, rather than being discarded as a total failure.\",\n  \"followup_needed\": true,\n  \"failure_modes_to_test\": [\n    \"Schema drift: Verify if the model consistently omits required keys under high cognitive load.\",\n    \"JSON injection: Check if raw_response contains unescaped characters that break wrapper parsing.\",\n    \"Content truncation: Ensure the substantive review is complete and not cut off due to token limits.\",\n    \"Hallucination of structure: Confirm the model isn't inventing fields that look like JSON but aren't valid.\"\n  ]\n}"
+      }
+    }
+  ],
+  "created": 1777846195,
+  "model": "qwen-27b-unsloth-nothink",
+  "system_fingerprint": "b8999-b97ebdc98",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 212,
+    "prompt_tokens": 194,
+    "total_tokens": 406,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "id": "chatcmpl-3AcSq9GLSEU0fV64NnjTSrcfhhyLUG7v",
+  "timings": {
+    "cache_n": 0,
+    "prompt_n": 194,
+    "prompt_ms": 138.521,
+    "prompt_per_token_ms": 0.7140257731958762,
+    "prompt_per_second": 1400.5096700139331,
+    "predicted_n": 212,
+    "predicted_ms": 3862.705,
+    "predicted_per_token_ms": 18.220306603773583,
+    "predicted_per_second": 54.88381846400385
+  }
+}

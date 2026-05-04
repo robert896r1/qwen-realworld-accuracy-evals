@@ -1,0 +1,98 @@
+[
+  {
+    "case_id": "monitor_mvp_scope_challenge",
+    "elapsed_sec": 7.639,
+    "error": null,
+    "json_valid": false,
+    "think_tag_present": true,
+    "markdown_fence_present": false
+  },
+  {
+    "case_id": "consensus_baseline_governance",
+    "elapsed_sec": 8.713,
+    "error": null,
+    "json_valid": false,
+    "think_tag_present": true,
+    "markdown_fence_present": false
+  },
+  {
+    "case_id": "cisco_source_metadata_plan",
+    "elapsed_sec": 8.117,
+    "error": null,
+    "json_valid": false,
+    "think_tag_present": true,
+    "markdown_fence_present": false
+  },
+  {
+    "case_id": "cisco_patch_review_synthetic",
+    "elapsed_sec": 15.034,
+    "error": null,
+    "json_valid": false,
+    "think_tag_present": true,
+    "markdown_fence_present": false
+  },
+  {
+    "case_id": "mls_outreach_ui_critique",
+    "elapsed_sec": 15.404,
+    "error": null,
+    "json_valid": false,
+    "think_tag_present": true,
+    "markdown_fence_present": false
+  },
+  {
+    "case_id": "design_translation_verification",
+    "elapsed_sec": 5.373,
+    "error": null,
+    "json_valid": false,
+    "think_tag_present": true,
+    "markdown_fence_present": false
+  },
+  {
+    "case_id": "json_parse_outlier_judgment",
+    "elapsed_sec": 4.106,
+    "error": null,
+    "json_valid": false,
+    "think_tag_present": true,
+    "markdown_fence_present": false
+  },
+  {
+    "case_id": "think_tag_false_positive_control",
+    "elapsed_sec": 2.583,
+    "error": null,
+    "json_valid": false,
+    "think_tag_present": true,
+    "markdown_fence_present": false
+  },
+  {
+    "case_id": "operator_intent_negative_control",
+    "elapsed_sec": 3.194,
+    "error": null,
+    "json_valid": false,
+    "think_tag_present": true,
+    "markdown_fence_present": false
+  },
+  {
+    "case_id": "short_logic_precision_control",
+    "elapsed_sec": 3.767,
+    "error": null,
+    "json_valid": false,
+    "think_tag_present": true,
+    "markdown_fence_present": false
+  },
+  {
+    "case_id": "short_schema_compliance_control",
+    "elapsed_sec": 1.368,
+    "error": null,
+    "json_valid": false,
+    "think_tag_present": true,
+    "markdown_fence_present": false
+  },
+  {
+    "case_id": "long_context_governance_attention",
+    "elapsed_sec": 15.099,
+    "error": null,
+    "json_valid": false,
+    "think_tag_present": true,
+    "markdown_fence_present": false
+  }
+]

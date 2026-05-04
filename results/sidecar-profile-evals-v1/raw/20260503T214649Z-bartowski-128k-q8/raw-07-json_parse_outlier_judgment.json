@@ -1,0 +1,36 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "<think>\n\n</think>\n\n{\n  \"rating\": \"partial_success\",\n  \"eval_candidate\": \"substance_valid_contract_fail\",\n  \"rationale\": \"The artifact contains high-value semantic content (concrete risks and validation suggestions) but fails strict schema compliance (parsed_response is null). For a local eval harness, this should be treated as a 'recoverable failure' where the raw_response is extracted for qualitative analysis, while the schema violation is logged as a technical debt item. The substance is preserved for human review, but the contract breach prevents automated downstream processing.\",\n  \"followup_needed\": true,\n  \"failure_modes_to_test\": [\n    \"Schema drift between model output and expected JSON structure\",\n    \"Null handling in parsed_response when raw_response is non-empty\",\n    \"Loss of semantic value due to strict parsing errors\",\n    \"Inconsistency between monitor warnings and actual content quality\"\n  ]\n}"
+      }
+    }
+  ],
+  "created": 1777844864,
+  "model": "qwen-27b-q6k-nothink",
+  "system_fingerprint": "b8999-b97ebdc98",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 191,
+    "prompt_tokens": 194,
+    "total_tokens": 385,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "id": "chatcmpl-OFvErS2wpklukWx6SHpRAxwMmOOFaMJ7",
+  "timings": {
+    "cache_n": 0,
+    "prompt_n": 194,
+    "prompt_ms": 123.669,
+    "prompt_per_token_ms": 0.6374690721649484,
+    "prompt_per_second": 1568.7035554585225,
+    "predicted_n": 191,
+    "predicted_ms": 3210.646,
+    "predicted_per_token_ms": 16.80966492146597,
+    "predicted_per_second": 59.48958558495704
+  }
+}

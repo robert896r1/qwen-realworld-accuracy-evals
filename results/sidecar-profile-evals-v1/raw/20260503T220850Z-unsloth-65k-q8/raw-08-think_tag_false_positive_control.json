@@ -1,0 +1,36 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "<think>\n\n</think>\n\n{\n  \"leakage_present\": false,\n  \"rating\": \"safe\",\n  \"rationale\": \"The artifact contains only meta-discussion and configuration documentation regarding the literal string 'think'. It does not contain actual model reasoning traces or hidden thought content. The monitor's flag is a false positive based on keyword matching rather than semantic analysis of leaked internal states.\",\n  \"monitor_rule_change\": \"Update regex/keyword filters to ignore occurrences of 'think' tags when they appear within code blocks, configuration examples, or meta-commentary about system prompts, provided no actual reasoning content follows the tag.\"\n}"
+      }
+    }
+  ],
+  "created": 1777846197,
+  "model": "qwen-27b-unsloth-nothink",
+  "system_fingerprint": "b8999-b97ebdc98",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 128,
+    "prompt_tokens": 197,
+    "total_tokens": 325,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "id": "chatcmpl-56KZBx7iSvq7Ni31luTBCIEsFtfam2nk",
+  "timings": {
+    "cache_n": 0,
+    "prompt_n": 197,
+    "prompt_ms": 136.472,
+    "prompt_per_token_ms": 0.6927512690355331,
+    "prompt_per_second": 1443.5195497977606,
+    "predicted_n": 128,
+    "predicted_ms": 2341.515,
+    "predicted_per_token_ms": 18.2930859375,
+    "predicted_per_second": 54.66546231819997
+  }
+}

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="520" viewBox="0 0 1100 520">
+<rect width="100%" height="100%" fill="#0b1020"/>
+<text x="280" y="34" fill="#f8fafc" font-size="24" font-family="Inter, Arial" font-weight="700">Elapsed seconds by profile</text>
+<line x1="280" y1="430" x2="1060" y2="430" stroke="#334155"/>
+<text x="20" y="101.5" fill="#cbd5e1" font-size="15" font-family="Inter, Arial">unsloth-65k-f16</text>
+<rect x="280" y="79.8" width="24.6" height="31.9" rx="7" fill="#38bdf8"/>
+<text x="314.6" y="101.5" fill="#f8fafc" font-size="14" font-family="Inter, Arial">22.0s</text>
+<text x="20" y="152.9" fill="#cbd5e1" font-size="15" font-family="Inter, Arial">unsloth-65k-q8</text>
+<rect x="280" y="131.2" width="26.5" height="31.9" rx="7" fill="#38bdf8"/>
+<text x="316.5" y="152.9" fill="#f8fafc" font-size="14" font-family="Inter, Arial">23.7s</text>
+<text x="20" y="204.3" fill="#cbd5e1" font-size="15" font-family="Inter, Arial">bartowski-128k-f16</text>
+<rect x="280" y="182.6" width="62.2" height="31.9" rx="7" fill="#a78bfa"/>
+<text x="352.2" y="204.3" fill="#f8fafc" font-size="14" font-family="Inter, Arial">55.7s</text>
+<text x="20" y="255.7" fill="#cbd5e1" font-size="15" font-family="Inter, Arial">bartowski-128k-q8</text>
+<rect x="280" y="234.1" width="63.5" height="31.9" rx="7" fill="#a78bfa"/>
+<text x="353.5" y="255.7" fill="#f8fafc" font-size="14" font-family="Inter, Arial">56.7s</text>
+<text x="20" y="307.2" fill="#cbd5e1" font-size="15" font-family="Inter, Arial">unsloth-128k-f16</text>
+<rect x="280" y="285.5" width="709.1" height="31.9" rx="7" fill="#38bdf8"/>
+<text x="999.1" y="307.2" fill="#f8fafc" font-size="14" font-family="Inter, Arial">634.1s</text>
+<text x="20" y="358.6" fill="#cbd5e1" font-size="15" font-family="Inter, Arial">unsloth-128k-q8</text>
+<rect x="280" y="336.9" width="64.4" height="31.9" rx="7" fill="#38bdf8"/>
+<text x="354.4" y="358.6" fill="#f8fafc" font-size="14" font-family="Inter, Arial">57.6s</text>
+<text x="20" y="410.0" fill="#cbd5e1" font-size="15" font-family="Inter, Arial">unsloth-128k-q8-reasoning-on-enable-false-preserve-false</text>
+<rect x="280" y="388.3" width="62.8" height="31.9" rx="7" fill="#f59e0b"/>
+<text x="352.8" y="410.0" fill="#f8fafc" font-size="14" font-family="Inter, Arial">56.1s</text>
+<text x="20" y="500" fill="#94a3b8" font-size="13" font-family="Inter, Arial">Generated from results/max-accuracy-v1/summary.json</text>
+</svg>

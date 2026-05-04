@@ -1,0 +1,36 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "<think>\n\n</think>\n\n{\n  \"answer\": \"42 screenshot checks are needed.\",\n  \"calculation\": \"7 cards * 2 states/card = 14 states requiring checks. Assuming 'screenshot checks' refers to the total number of state verifications across all cards, it is 7 * 2 = 14. However, if 'checks' implies a standard practice of comparing against a baseline or multiple resolutions/browsers not specified, we stick to the literal interpretation: 7 cards * 2 states = 14 checks. Wait, let me re-read carefully. 'Two states per card need screenshot checks'. Total cards = 7. Checks per card = 2. Total checks = 7 * 2 = 14.\",\n  \"preserved_constraints\": [\n    \"Do not create files\",\n    \"Do not recommend a framework switch\",\n    \"Do not start services\"\n  ]\n}"
+      }
+    }
+  ],
+  "created": 1777846204,
+  "model": "qwen-27b-unsloth-nothink",
+  "system_fingerprint": "b8999-b97ebdc98",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 193,
+    "prompt_tokens": 166,
+    "total_tokens": 359,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "id": "chatcmpl-4sR2acrwDTpGkcJfY6MGgck60zlgliQG",
+  "timings": {
+    "cache_n": 0,
+    "prompt_n": 166,
+    "prompt_ms": 130.283,
+    "prompt_per_token_ms": 0.7848373493975903,
+    "prompt_per_second": 1274.1493517957065,
+    "predicted_n": 193,
+    "predicted_ms": 3530.039,
+    "predicted_per_token_ms": 18.29035751295337,
+    "predicted_per_second": 54.67361692037963
+  }
+}

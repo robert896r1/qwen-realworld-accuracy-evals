@@ -1,0 +1,36 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "<think>\n\n</think>\n\n{\n  \"route\": \"qwen\",\n  \"allowed_responders\": [\n    \"qwen\"\n  ],\n  \"reason\": \"Message prefixed with @qwen, restricting response to qwen only.\"\n}"
+      }
+    }
+  ],
+  "created": 1777882149,
+  "model": "qwen-27b-unsloth-128k-q8-nothink",
+  "system_fingerprint": "b8999-b97ebdc98",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 51,
+    "prompt_tokens": 122,
+    "total_tokens": 173,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "id": "chatcmpl-NxrLucjVhpGki6RsEU844mqj4nDbjfwf",
+  "timings": {
+    "cache_n": 0,
+    "prompt_n": 122,
+    "prompt_ms": 135.295,
+    "prompt_per_token_ms": 1.1089754098360656,
+    "prompt_per_second": 901.7332495657638,
+    "predicted_n": 51,
+    "predicted_ms": 977.6,
+    "predicted_per_token_ms": 19.16862745098039,
+    "predicted_per_second": 52.168576104746315
+  }
+}

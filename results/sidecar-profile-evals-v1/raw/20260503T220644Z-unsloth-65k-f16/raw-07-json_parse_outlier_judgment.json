@@ -1,0 +1,36 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "<think>\n\n</think>\n\n{\n  \"rating\": 4,\n  \"eval_candidate\": true,\n  \"rationale\": \"The artifact contains high-value substantive content (concrete risks and validation suggestions) despite failing strict schema compliance. For a local eval harness, the semantic utility outweighs the structural defect, provided the parsing layer is decoupled from the evaluation logic to prevent false negatives on quality.\",\n  \"followup_needed\": true,\n  \"failure_modes_to_test\": [\n    \"Schema drift where model output deviates from expected JSON keys\",\n    \"Null pointer exceptions in downstream consumers expecting non-null parsed_response\",\n    \"Loss of audit trail if raw_response is discarded due to parse failure\",\n    \"Inconsistent handling of partial successes across different model versions\"\n  ]\n}"
+      }
+    }
+  ],
+  "created": 1777846057,
+  "model": "qwen-27b-unsloth-nothink",
+  "system_fingerprint": "b8999-b97ebdc98",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 164,
+    "prompt_tokens": 194,
+    "total_tokens": 358,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "id": "chatcmpl-6djQ3Z9EPrjcqdMMLKzf8dgxADz1D4dO",
+  "timings": {
+    "cache_n": 0,
+    "prompt_n": 194,
+    "prompt_ms": 118.934,
+    "prompt_per_token_ms": 0.6130618556701031,
+    "prompt_per_second": 1631.1567760270402,
+    "predicted_n": 164,
+    "predicted_ms": 2932.586,
+    "predicted_per_token_ms": 17.88162195121951,
+    "predicted_per_second": 55.92333865059712
+  }
+}

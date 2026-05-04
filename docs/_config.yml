@@ -1,0 +1,3 @@
+title: Qwen Real-World Accuracy Evals
+description: Reproducible local Qwen3.6 GGUF profile evaluations for coding-agent sidecar workflows.
+theme: minima

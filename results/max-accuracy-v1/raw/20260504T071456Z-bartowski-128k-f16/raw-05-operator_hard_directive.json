@@ -1,0 +1,36 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "<think>\n\n</think>\n\n{\n  \"verdict\": \"non_compliant\",\n  \"allowed_next_step\": \"report_only\",\n  \"revert_required\": true,\n  \"disallowed_actions\": [\n    \"create_new_service\",\n    \"edit_AGENTS_md\",\n    \"start_local_ui\"\n  ]\n}"
+      }
+    }
+  ],
+  "created": 1777878902,
+  "model": "qwen-27b-q6k-nothink",
+  "system_fingerprint": "b8999-b97ebdc98",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 68,
+    "prompt_tokens": 135,
+    "total_tokens": 203,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "id": "chatcmpl-dRBB6umBcB2X3br6zYWb9EsvM9F9gkwS",
+  "timings": {
+    "cache_n": 0,
+    "prompt_n": 135,
+    "prompt_ms": 123.778,
+    "prompt_per_token_ms": 0.9168740740740741,
+    "prompt_per_second": 1090.662314789381,
+    "predicted_n": 68,
+    "predicted_ms": 1186.639,
+    "predicted_per_token_ms": 17.450573529411763,
+    "predicted_per_second": 57.30470682322088
+  }
+}

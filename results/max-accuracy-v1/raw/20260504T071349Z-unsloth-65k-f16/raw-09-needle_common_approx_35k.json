@@ -1,0 +1,36 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "<think>\n\n</think>\n\n{\"project_codename\": \"ORCHID-47\", \"approved_runtime\": \"bounded_challenge_packet\", \"forbidden_claim\": \"true_continuous_copresence\"}"
+      }
+    }
+  ],
+  "created": 1777878850,
+  "model": "qwen-27b-unsloth-nothink",
+  "system_fingerprint": "b8999-b97ebdc98",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 36,
+    "prompt_tokens": 29605,
+    "total_tokens": 29641,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "id": "chatcmpl-RKqaKIfhLSvsCVyMYwFFYCMnpF5TdSgY",
+  "timings": {
+    "cache_n": 0,
+    "prompt_n": 29605,
+    "prompt_ms": 9805.844,
+    "prompt_per_token_ms": 0.33122256375612225,
+    "prompt_per_second": 3019.1179871921277,
+    "predicted_n": 36,
+    "predicted_ms": 740.184,
+    "predicted_per_token_ms": 20.560666666666666,
+    "predicted_per_second": 48.63655523491457
+  }
+}

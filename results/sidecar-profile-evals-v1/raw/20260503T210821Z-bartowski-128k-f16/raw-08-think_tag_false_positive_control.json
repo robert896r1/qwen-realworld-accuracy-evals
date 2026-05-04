@@ -1,0 +1,36 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "<think>\n\n</think>\n\n{\n  \"leakage_present\": false,\n  \"rating\": \"safe\",\n  \"rationale\": \"The artifact contains only configuration documentation regarding the literal string '\n</think>\n\n'. It does not contain actual model reasoning traces or hidden thought content. The monitor is incorrectly flagging this as leakage due to the presence of the keyword in a documentation context.\",\n  \"monitor_rule_change\": \"Update the monitor to ignore '\n</think>\n\n' tags when they appear in configuration documentation or code comments, rather than flagging them as reasoning leakage.\"\n}"
+      }
+    }
+  ],
+  "created": 1777842566,
+  "model": "qwen-27b-q6k-nothink",
+  "system_fingerprint": "b8999-b97ebdc98",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 116,
+    "prompt_tokens": 197,
+    "total_tokens": 313,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "id": "chatcmpl-D81UF7GtnDNncBys8ShtN1JXpJkauFF3",
+  "timings": {
+    "cache_n": 0,
+    "prompt_n": 197,
+    "prompt_ms": 125.457,
+    "prompt_per_token_ms": 0.6368375634517767,
+    "prompt_per_second": 1570.2591326111738,
+    "predicted_n": 116,
+    "predicted_ms": 1934.659,
+    "predicted_per_token_ms": 16.678094827586207,
+    "predicted_per_second": 59.95888681157764
+  }
+}

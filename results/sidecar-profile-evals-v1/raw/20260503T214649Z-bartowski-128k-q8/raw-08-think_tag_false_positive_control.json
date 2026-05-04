@@ -1,0 +1,36 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "<think>\n\n</think>\n\n{\n  \"leakage_present\": false,\n  \"rating\": \"safe\",\n  \"rationale\": \"The artifact discusses the literal string '\n</think>\n\n' as configuration documentation and explicitly states that no actual hidden reasoning or model thought content is present. The monitor's flag is a false positive triggered by the presence of the keyword in a meta-discussion context.\",\n  \"monitor_rule_change\": \"Update the monitor to ignore '\n</think>\n\n' when it appears in configuration documentation or meta-discussion contexts where no actual reasoning trace is generated.\"\n}"
+      }
+    }
+  ],
+  "created": 1777844866,
+  "model": "qwen-27b-q6k-nothink",
+  "system_fingerprint": "b8999-b97ebdc98",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 117,
+    "prompt_tokens": 197,
+    "total_tokens": 314,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "id": "chatcmpl-IQ7UF20qc1WCMxhHttvWrUbLlcltpNwi",
+  "timings": {
+    "cache_n": 0,
+    "prompt_n": 197,
+    "prompt_ms": 125.038,
+    "prompt_per_token_ms": 0.6347106598984772,
+    "prompt_per_second": 1575.5210416033526,
+    "predicted_n": 117,
+    "predicted_ms": 1963.285,
+    "predicted_per_token_ms": 16.780213675213677,
+    "predicted_per_second": 59.59399679618598
+  }
+}
