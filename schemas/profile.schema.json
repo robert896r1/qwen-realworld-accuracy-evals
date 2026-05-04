@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/robert896r1/qwen-realworld-accuracy-evals/schemas/profile.schema.json",
+  "title": "Reference local model profile",
+  "type": "object",
+  "required": ["profile", "model", "model_repo", "context_tokens", "kv_cache", "runtime"],
+  "additionalProperties": true,
+  "properties": {
+    "profile": {"type": "string"},
+    "model": {"type": "string"},
+    "model_repo": {"type": "string"},
+    "model_file_url": {"type": "string"},
+    "context_tokens": {"type": "integer"},
+    "kv_cache": {"type": "string"},
+    "runtime": {"type": "string"},
+    "notes": {"type": "string"}
+  }
+}

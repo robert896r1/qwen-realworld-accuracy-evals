@@ -1,0 +1,28 @@
+name: Scoring disagreement
+description: Challenge a case score, expected answer, or rubric detail.
+title: "Scoring disagreement: <case id>"
+labels: ["scoring"]
+body:
+  - type: input
+    id: case_id
+    attributes:
+      label: Case id
+    validations:
+      required: true
+  - type: textarea
+    id: raw_output
+    attributes:
+      label: Raw output or relevant excerpt
+      render: json
+    validations:
+      required: true
+  - type: textarea
+    id: disagreement
+    attributes:
+      label: What is wrong with the current scoring?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed scoring/rubric change

@@ -1,0 +1,17 @@
+{
+  "profile": "bartowski-128k-f16",
+  "model": "Qwen_Qwen3.6-27B-Q6_K_L.gguf",
+  "model_repo": "https://huggingface.co/bartowski/Qwen_Qwen3.6-27B-GGUF",
+  "model_file_url": "https://huggingface.co/bartowski/Qwen_Qwen3.6-27B-GGUF/blob/main/Qwen_Qwen3.6-27B-Q6_K_L.gguf",
+  "context_tokens": 131072,
+  "kv_cache": "f16/f16",
+  "port": 8081,
+  "reasoning": "off",
+  "reasoning_format": "none",
+  "chat_template_kwargs": {
+    "enable_thinking": false
+  },
+  "runtime": "llama.cpp",
+  "reference_only": true,
+  "notes": "Reference profile from the original local test set. Not part of the canonical eval definition."
+}

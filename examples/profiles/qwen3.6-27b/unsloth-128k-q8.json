@@ -1,0 +1,17 @@
+{
+  "profile": "unsloth-128k-q8",
+  "model": "Qwen3.6-27B-UD-Q6_K_XL.gguf",
+  "model_repo": "https://huggingface.co/unsloth/Qwen3.6-27B-GGUF",
+  "model_file_url": "https://huggingface.co/unsloth/Qwen3.6-27B-GGUF?show_file_info=Qwen3.6-27B-UD-Q6_K_XL.gguf",
+  "context_tokens": 131072,
+  "kv_cache": "q8_0/q8_0",
+  "port": 8082,
+  "reasoning": "off",
+  "reasoning_format": "none",
+  "chat_template_kwargs": {
+    "enable_thinking": false
+  },
+  "runtime": "llama.cpp",
+  "reference_only": true,
+  "notes": "Reference profile from the original local test set. Not part of the canonical eval definition."
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/robert896r1/qwen-realworld-accuracy-evals/schemas/run.schema.json",
+  "title": "Sidecar companion eval run",
+  "type": "object",
+  "required": ["schema_version", "suite", "created_at", "model", "profile_label", "endpoint", "sampler", "case_count"],
+  "additionalProperties": true,
+  "properties": {
+    "schema_version": {"type": "string"},
+    "suite": {"type": "string"},
+    "created_at": {"type": "string"},
+    "model": {"type": "string"},
+    "profile_label": {"type": "string"},
+    "endpoint": {"type": "string"},
+    "sampler": {"type": "object"},
+    "case_count": {"type": "integer", "minimum": 1},
+    "server_props_summary": {"type": ["object", "null"]}
+  }
+}

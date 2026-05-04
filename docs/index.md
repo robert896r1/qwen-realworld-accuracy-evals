@@ -37,3 +37,4 @@ The practical question was: **which local `llama.cpp` profile should stay in rot
 - [Results](results.md)
 - [Interpretation](interpretation.md)
 - [Replication](replication.md)
+- [Contributing cases](contributing-cases.md)

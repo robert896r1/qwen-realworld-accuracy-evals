@@ -1,0 +1,58 @@
+name: Submit run result
+description: Share a packaged result from the canonical suite without committing raw output directly.
+title: "Run result: <model/profile/hardware>"
+labels: ["run-result"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Package your run first:
+        `python tools/package_submission.py runs/local/<run-dir>`
+        Then attach the zip from `submissions/out/`.
+  - type: input
+    id: suite
+    attributes:
+      label: Suite
+      placeholder: sidecar-companion-v1
+    validations:
+      required: true
+  - type: input
+    id: model
+    attributes:
+      label: Model and quant
+      placeholder: Qwen3.6-27B UD-Q6_K_XL
+    validations:
+      required: true
+  - type: input
+    id: runtime
+    attributes:
+      label: Runtime/backend
+      placeholder: llama.cpp build/hash, vLLM version, Ollama version, etc.
+    validations:
+      required: true
+  - type: input
+    id: hardware
+    attributes:
+      label: Hardware
+      placeholder: GPU/VRAM/CPU/RAM
+    validations:
+      required: true
+  - type: textarea
+    id: launch
+    attributes:
+      label: Launch command or key runtime settings
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: deviations
+    attributes:
+      label: Deviations from the reference run
+      description: Note changed sampling, case limits, context limits, timeouts, or backend quirks.
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy confirmation
+      options:
+        - label: The attached package contains no secrets, proprietary code, customer data, or private repo content.
+          required: true

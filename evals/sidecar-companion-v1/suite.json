@@ -1,0 +1,19 @@
+{
+  "id": "sidecar-companion-v1",
+  "schema_version": "1.0",
+  "status": "canonical",
+  "scoring": "exact_json_fields",
+  "pitch": "Synthetic benchmarks tell you what a model can solve in isolation. This suite tests whether a local model is useful beside a frontier coding agent in real work.",
+  "case_file": "cases.jsonl",
+  "rubric": "rubric.md",
+  "categories": [
+    "exact_logic",
+    "exact_instruction",
+    "code_review_exact",
+    "instruction_fidelity_exact",
+    "ui_review_exact",
+    "artifact_triage_exact",
+    "long_context_retrieval"
+  ],
+  "contribution_policy": "New cases enter through issue proposals first. Accepted cases must be sanitized, reproducible, sidecar-relevant, and scoreable."
+}

@@ -1,0 +1,61 @@
+name: Propose real-world case
+description: Propose a sanitized sidecar eval case derived from a real coding-agent failure mode.
+title: "Case proposal: <short failure mode>"
+labels: ["case-proposal"]
+body:
+  - type: textarea
+    id: failure
+    attributes:
+      label: Real-world failure mode
+      description: What happened in actual work? Keep it sanitized.
+    validations:
+      required: true
+  - type: textarea
+    id: prompt
+    attributes:
+      label: Minimal prompt/context
+      description: Include only what is needed to reproduce the behavior. Sanitize aggressively.
+      render: markdown
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior / answer
+    validations:
+      required: true
+  - type: textarea
+    id: scoring
+    attributes:
+      label: Proposed scoring rule
+      description: Prefer exact JSON fields where possible.
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - directive_fidelity
+        - overbuild_detection
+        - code_review_precision
+        - ui_review
+        - artifact_triage
+        - long_context_attention
+        - challenge_quality
+        - other
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why this matters for local sidecar models
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy confirmation
+      options:
+        - label: This proposal contains no secrets, proprietary code, customer data, or private repo content.
+          required: true

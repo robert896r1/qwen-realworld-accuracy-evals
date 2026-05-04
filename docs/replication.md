@@ -1,62 +1,76 @@
 # Replication guide
 
-## 1. Build or install llama.cpp
+The fastest path assumes you already have a local OpenAI-compatible endpoint running. This repo does not download models or start model servers.
 
-Use a recent `llama.cpp` with `llama-server` support for:
-
-- OpenAI-compatible `/v1/chat/completions`;
-- `--jinja`;
-- `--reasoning`;
-- `--reasoning-format`;
-- `--chat-template-kwargs`;
-- `--cache-type-k` and `--cache-type-v`.
-
-## 2. Download models
-
-Example Hugging Face CLI commands:
+## 1. Clone the repo
 
 ```bash
-huggingface-cli download unsloth/Qwen3.6-27B-GGUF \
-  --include 'Qwen3.6-27B-UD-Q6_K_XL.gguf' \
-  --local-dir ~/models/qwen3.6-27b-unsloth
-
-huggingface-cli download bartowski/Qwen_Qwen3.6-27B-GGUF \
-  --include 'Qwen_Qwen3.6-27B-Q6_K_L.gguf' \
-  --local-dir ~/models/qwen3.6-27b
+git clone https://github.com/robert896r1/qwen-realworld-accuracy-evals.git
+cd qwen-realworld-accuracy-evals
 ```
 
-## 3. Launch a profile
+## 2. Start your model separately
 
-Use one of the scripts in `configs/` as a starting point. Example:
-
-```bash
-configs/launch-unsloth-128k-q8.sh
-```
-
-Adjust `llama-server` path and model paths as needed.
-
-## 4. Run the exact suite
-
-```bash
-cd tests/max-accuracy-v1
-./run_accuracy_eval.py \
-  --profile-label my-profile-name \
-  --endpoint http://127.0.0.1:8082/v1/chat/completions
-```
-
-## 5. Regenerate summaries and charts
-
-From repo root:
-
-```bash
-scripts/generate_summary_and_charts.py
-```
-
-## 6. Compare
-
-Review:
+Use your own runtime. The original tests used local `llama.cpp` servers. Reference launch examples live under:
 
 ```text
-results/max-accuracy-v1/summary.csv
-charts/*.svg
+examples/launch/llama-cpp/
 ```
+
+Those scripts are examples only. Adjust paths, ports, context size, KV cache, and runtime flags for your machine.
+
+## 3. Smoke-test the runner
+
+Run two short cases first:
+
+```bash
+python tools/run_eval.py \
+  --suite evals/sidecar-companion-v1 \
+  --base-url http://127.0.0.1:8082/v1 \
+  --model your-local-model-alias \
+  --profile-label smoke-test \
+  --case-limit 2
+```
+
+Expected output:
+
+- a new directory under `runs/local/`;
+- `run.json` with model/runtime metadata;
+- `raw.jsonl` with per-case outputs;
+- `score.json` with exact score summary;
+- `notes.md`, `environment.txt`, and `launch_command.txt`.
+
+Validate it:
+
+```bash
+python tools/validate_run.py runs/local/<run-dir>
+```
+
+## 4. Run the full canonical suite
+
+```bash
+python tools/run_eval.py \
+  --suite evals/sidecar-companion-v1 \
+  --base-url http://127.0.0.1:8082/v1 \
+  --model your-local-model-alias \
+  --profile-label your-profile-label
+```
+
+## 5. Package a submission
+
+```bash
+python tools/package_submission.py runs/local/<run-dir>
+```
+
+Attach the zip from `submissions/out/` to a **Submit run result** issue. Do not commit local run output directly.
+
+## 6. Regenerate existing summary charts
+
+The published charts are generated from the historical result set already committed under `results/max-accuracy-v1/raw/`:
+
+```bash
+python scripts/generate_summary_and_charts.py
+cp charts/*.svg docs/assets/charts/
+```
+
+That chart script is for the current published result matrix. New community run packages should stay out of the canonical chart until reviewed.

@@ -1,4 +1,14 @@
+# Local eval output
+runs/local/
+submissions/out/
+
+# Python/cache noise
 __pycache__/
-*.pyc
-.env
+*.py[cod]
+.pytest_cache/
+
+# Local sidecar notes
+.local/
+
+# Local editor/system noise
 .DS_Store

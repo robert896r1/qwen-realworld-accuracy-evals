@@ -1,0 +1,21 @@
+name: Suite suggestion
+description: Suggest a new category, suite direction, or evaluation lane.
+title: "Suite suggestion: <short idea>"
+labels: ["suite-suggestion"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: Suggestion
+    validations:
+      required: true
+  - type: textarea
+    id: value
+    attributes:
+      label: Why this helps companion-agent evaluation
+    validations:
+      required: true
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks / scope creep

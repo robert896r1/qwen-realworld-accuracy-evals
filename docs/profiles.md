@@ -38,3 +38,13 @@ configs/*.sh
 ## Notes from upstream docs
 
 Qwen3.6 documentation describes thinking mode, non-thinking mode, and thinking preservation. It also recommends at least 128K context for preserving thinking capabilities in complex tasks. See the Qwen model card and docs linked above.
+
+## Reference profile cards
+
+Reference-only machine-readable profile cards live under:
+
+```text
+examples/profiles/qwen3.6-27b/
+```
+
+These are not eval definitions. They document the profiles used in the original local runs so others can compare their launch settings and result packages.

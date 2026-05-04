@@ -56,3 +56,9 @@ The server launch profile still matters: model file, context length, KV cache ty
 - Exact scoring penalizes values that are semantically close but not exact.
 - The suite is designed for a Codex + Qwen sidecar workflow, not for general reasoning leaderboard claims.
 - Server logs with local device identifiers are not published; raw API outputs and scoring records are included.
+
+## Canonical community suite
+
+The contribution-facing suite is `evals/sidecar-companion-v1`. It uses exact JSON-field scoring so independent local runs can be compared without relying on subjective prose grading.
+
+Historical test packs under `tests/` are kept for provenance. New contributors should start with `evals/sidecar-companion-v1` and the tools under `tools/`.

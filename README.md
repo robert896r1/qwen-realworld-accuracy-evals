@@ -42,6 +42,51 @@ For this workload, the keepers are:
 
 That order is deliberately conservative: prioritize the successful 128k q8 profiles for day-to-day local sidecar work, keep the Bartowski f16 result as the control, and do not read more into the data than this suite actually tested.
 
+## Replicate the suite
+
+This repo does not provide model weights or start model servers. Start your local model separately, then point the runner at an existing OpenAI-compatible endpoint.
+
+Quick smoke run:
+
+```bash
+python tools/run_eval.py \
+  --suite evals/sidecar-companion-v1 \
+  --base-url http://127.0.0.1:8082/v1 \
+  --model your-local-model-alias \
+  --profile-label smoke-test \
+  --case-limit 2
+```
+
+Full canonical run:
+
+```bash
+python tools/run_eval.py \
+  --suite evals/sidecar-companion-v1 \
+  --base-url http://127.0.0.1:8082/v1 \
+  --model your-local-model-alias \
+  --profile-label your-profile-label
+```
+
+Validate and package the result:
+
+```bash
+python tools/validate_run.py runs/local/<run-dir>
+python tools/package_submission.py runs/local/<run-dir>
+```
+
+The package lands in `submissions/out/` and can be attached to a GitHub issue. Local run output is ignored by git by default.
+
+## Contribute without polluting the repo
+
+The accepted suite is curated. The easiest way to help is either:
+
+1. submit a packaged run result from your own hardware/model profile; or
+2. propose a small, sanitized real-world failure case.
+
+Good cases are boring to score and annoying for models to pass: over-build detection, missed hard directives, bad UI judgment, weak challenge behavior, artifact triage mistakes, or long-context misses.
+
+Start with [CONTRIBUTING.md](CONTRIBUTING.md) or [Contributing cases](docs/contributing-cases.md).
+
 ## Links
 
 - [Methodology](docs/methodology.md)
@@ -49,6 +94,7 @@ That order is deliberately conservative: prioritize the successful 128k q8 profi
 - [Full results](docs/results.md)
 - [Interpretation notes](docs/interpretation.md)
 - [Replication guide](docs/replication.md)
+- [Contribution guide](CONTRIBUTING.md)
 
 ## Hardware/runtime disclosure
 
