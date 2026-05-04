@@ -11,7 +11,7 @@ In that workflow, Qwen has a narrow job: challenge Codex, catch over-building, r
 - Context length mattered more than f16-vs-q8 KV. The 65k profiles handled the short and common-context cases, then failed the >65k needle by construction.
 - `unsloth-128k-f16` loaded, but the long-context cases got stuck under local memory/throughput pressure and timed out. Treat that row as a local viability failure, not as evidence that the model gave bad long-context answers.
 
-## Headline figures
+## Main Charts
 
 Elapsed time shows the operational cost. The heatmap shows exactly where each profile broke.
 
@@ -59,7 +59,7 @@ That order is deliberately conservative: prioritize the successful 128k q8 profi
 
 ## Attribution
 
-Built from Robert's local Codex + Qwen sidecar workflow. Codex handled deterministic inspection, packaging, charting, and integration. Qwen was used as the local challenger in the workflow being evaluated.
+Built from my local Codex + Qwen sidecar workflow. Codex handled deterministic inspection, packaging, charting, and integration. Qwen was used as the local challenger in the workflow being evaluated.
 
 ## License
 
